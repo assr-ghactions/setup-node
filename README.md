@@ -19,7 +19,7 @@ See [action.yml](action.yml)
 ```yaml
 steps:
 - uses: actions/checkout@v2
-- uses: actions/setup-node@v2
+- uses: assr-ghactions/setup-node@v2
   with:
     node-version: '14'
 - run: npm install
@@ -51,7 +51,7 @@ See the examples of using cache for `yarn` / `pnpm` and  `cache-dependency-path`
 ```yaml
 steps:
 - uses: actions/checkout@v2
-- uses: actions/setup-node@v2
+- uses: assr-ghactions/setup-node@v2
   with:
     node-version: '14'
     cache: 'npm'
@@ -63,7 +63,7 @@ steps:
 ```yaml
 steps:
 - uses: actions/checkout@v2
-- uses: actions/setup-node@v2
+- uses: assr-ghactions/setup-node@v2
   with:
     node-version: '14'
     cache: 'npm'
@@ -84,7 +84,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Setup node
-        uses: actions/setup-node@v2
+        uses: assr-ghactions/setup-node@v2
         with:
           node-version: ${{ matrix.node }}
       - run: npm install
